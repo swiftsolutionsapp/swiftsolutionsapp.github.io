@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hatrimo.com – Website đang xây dựng</title>
+  <meta name="description" content="Hatrimo.com đang được xây dựng. Kết nối TikTok để nhận cập nhật mới nhất." />
+  <link rel="canonical" href="https://hatrimo.com/" />
+  <meta property="og:title" content="Hatrimo – Coming Soon" />
+  <meta property="og:description" content="Website đang được xây dựng. Kết nối để nhận thông báo sớm." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://hatrimo.com/" />
+  <meta property="og:locale" content="vi_VN" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Hatrimo – Coming Soon" />
+  <meta name="twitter:description" content="Website đang được xây dựng." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- TODO: Thêm favicon (favicon.ico, site.webmanifest) khi sẵn sàng -->
+  <style>
+    :root {
+      --gradient: linear-gradient(135deg, rgba(255,107,107,.85), rgba(78,205,196,.85));
+      --surface-border: rgba(255,255,255,.28);
+      --surface-outline: rgba(255,255,255,.4);
+      --txt-soft: rgba(255,255,255,.92);
+    }
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: 'Noto Sans', sans-serif;
+      background: #1e3c72;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      color: #fff;
+    }
+    main {
+      width: 100%;
+      max-width: 700px;
+      padding: clamp(1.75rem, 4vw, 3rem) clamp(1.5rem, 4vw, 3rem);
+      background: var(--gradient);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--surface-border);
+      border-radius: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,.25);
+      animation: fade .9s ease;
+      text-align: center;
+    }
+    h1 {
+      margin: 0 0 18px;
+      font-size: clamp(2.1rem, 6vw, 3.2rem);
+      line-height: 1.08;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 4px rgba(0,0,0,.35);
+    }
+    p {
+      margin: 0 0 32px;
+      font-size: clamp(1rem, 1.4vw, 1.2rem);
+      line-height: 1.58;
+      font-weight: 400;
+      color: var(--txt-soft);
+    }
+    ul.social-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    a.social {
+      --bg: rgba(255,255,255,.25);
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 28px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 50px;
+      background: var(--bg);
+      border: 1px solid var(--surface-outline);
+      backdrop-filter: blur(4px);
+      transition: background .28s ease, transform .28s ease, box-shadow .28s ease;
+    }
+    a.social:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 3px;
+    }
+    a.social:hover, a.social:focus-visible {
+      background: rgba(255,255,255,.38);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 18px rgba(0,0,0,.28);
+    }
+    a.social span.icon { font-size: 1.35rem; line-height: 1; }
+    footer { margin-top: 36px; font-size: .75rem; letter-spacing: .3px; opacity: .75; }
+    @media (max-width: 520px) {
+      a.social { padding: 12px 22px; font-size: .98rem; }
+      ul.social-links { gap: 16px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+    }
+    @keyframes fade { from { opacity: 0; transform: translateY(18px);} to { opacity: 1; transform: translateY(0);} }
+  </style>
+</head>
+<body>
+  <main role="main">
+    <h1>hatrimo.com đang xây dựng</h1>
+    <p>Website chính thức sắp ra mắt.</p>
+    <p>Kết nối TikTok để nhận thông báo và nội dung mới nhất.</p>
+    <ul class="social-links">
+      <li>
+        <a class="social" href="https://www.tiktok.com/@hatrimo.com" target="_blank" rel="noopener noreferrer" aria-label="Theo dõi Hatrimo trên TikTok">
+          <span class="icon" aria-hidden="true">🎵</span>
+          <span>TikTok</span>
+        </a>
+      </li>
+    </ul>
+    <footer>
+      © <span id="year"></span> Hatrimo. All rights reserved.
+    </footer>
+  </main>
+  <script>
+    // Cập nhật năm hiện tại (không chặn rendering vì rất nhỏ)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
